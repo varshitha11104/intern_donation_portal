@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 const PORT = 5000;
 const corsOptions = {
-  origin: 'https://intern-donation-portal.vercel.app/',
+  origin: 'https://intern-donation-portal.vercel.app',
   methods: ['GET', 'POST'],
   credentials: true
 };
