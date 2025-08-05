@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const dashboardRoutes = require('./routes/dashboard');
-
+require('dotenv').config();
 const app = express();
 const PORT = 5000;
 
@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://bhumireddyvarshitha944:lWKSqhQbElIoMV8C@cluster0.ka1ez1z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))
@@ -23,5 +23,3 @@ app.use('/api',dashboardRoutes);
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
 
-//lWKSqhQbElIoMV8C
-//mongodb+srv://bhumireddyvarshitha944:lWKSqhQbElIoMV8C@cluster0.ka1ez1z.mongodb.net/
