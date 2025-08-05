@@ -18,12 +18,12 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch(err => console.error('MongoDB error:', err));
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('Intern Portal backend is running successfully');
-});
+
 
 app.use('/api', authRoutes);
 app.use('/api',dashboardRoutes);
-
+app.get('/', (req, res) => {
+res.send('Intern Portal backend is running successfully');
+});
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
 
