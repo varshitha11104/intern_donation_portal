@@ -12,7 +12,7 @@ function Login() {
   const handleLogin = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post("http://localhost:5000/api/login", { email, password });
+    const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/login`, { email, password });
     alert('Login successful!');
     
     localStorage.setItem('userEmail', email);
