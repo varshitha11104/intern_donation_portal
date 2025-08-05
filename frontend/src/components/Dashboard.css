@@ -1,0 +1,75 @@
+/* Dashboard.css */
+
+.dashboard-container {
+  background: #f0f4f8;
+  min-height: 100vh;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+}
+
+.dashboard-info p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.dashboard-rewards {
+  margin-top: 30px;
+}
+
+.dashboard-rewards h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.dashboard-rewards ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-rewards li {
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-loading {
+  font-size: 18px;
+  color: #555;
+}
+.leaderboard-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.leaderboard-button:hover {
+  background-color: #388e3c;
+}
+
