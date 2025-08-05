@@ -11,7 +11,7 @@ function Dashboard() {
   useEffect(() => {
   const userEmail = localStorage.getItem('userEmail');
 
-  axios.post(`${process.env.REACT_APP_BASE_URL}/api/dashboard`, { email: userEmail })
+  axios.post("http://localhost:5000/api/dashboard", { email: userEmail })
     .then(res => setData(res.data))
     .catch(err => console.error(err));
 }, []);
