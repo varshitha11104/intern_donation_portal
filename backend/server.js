@@ -6,8 +6,12 @@ const dashboardRoutes = require('./routes/dashboard');
 require('dotenv').config();
 const app = express();
 const PORT = 5000;
-
-app.use(cors());
+const corsOptions = {
+  origin: 'https://intern-donation-portal.vercel.app', // your deployed frontend
+  methods: ['GET', 'POST'],
+  credentials: true
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Connect to MongoDB
